@@ -24,7 +24,7 @@ module Semver
     # @return [Version]
     def self.parse(string)
       semver = allocate
-      semver.send(:initialize, Parser.new.parse(string))
+      semver.send(:initialize, **Parser.new.parse(string))
       semver
     end
 
